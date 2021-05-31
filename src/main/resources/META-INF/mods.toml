@@ -1,0 +1,31 @@
+modLoader="javafml" #mandatory
+
+loaderVersion="[36,)"
+license="All rights reserved"
+
+[[mods]]
+modId="tbmm"
+version="${file.jarVersion}"
+displayName="Money Mod"
+logoFile="examplemod.png"
+credits="To the all amazing Cy4 Tutorials (youtube) for helping me learn stuff"
+authors="Shadow"
+description='''
+A mod for money. Make money. Spend money. Perfect for servers.
+'''
+
+[[dependencies.examplemod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"

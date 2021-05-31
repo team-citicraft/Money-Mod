@@ -1,0 +1,11 @@
+{
+  "itemGroup.MoneyModTab": "Money Mod Tab",
+  "item.tbmm.onedollar": "One Dollar",
+  "item.tbmm.twodollar": "Two Dollars",
+  "item.tbmm.fivedollar": "Five Dollars",
+  "item.tbmm.tendollar": "Ten Dollars",
+  "item.tbmm.twentydollar": "Twenty Dollars",
+  "item.tbmm.fiftydollar": "Fifty Dollars",
+  "item.tbmm.onehundreddollar": "One Hundred Dollars",
+  "block.tbmm.printer": "Money Printer"
+}
