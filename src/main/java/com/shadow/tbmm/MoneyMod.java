@@ -36,7 +36,7 @@ public class MoneyMod
     }
 
     @SubscribeEvent
-    public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
+    public void onRegisterItems(final RegistryEvent.Register<Item> event) {
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
             event.getRegistry().register(new BlockItem(block, new Item.Properties().tab(MoneyMod.TAB))
                     .setRegistryName(block.getRegistryName()));
