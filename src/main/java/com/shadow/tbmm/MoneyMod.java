@@ -22,6 +22,7 @@ import org.apache.logging.log4j.Logger;
 
 
 @Mod("tbmm")
+@Mod.EventBusSubscriber(modid = MoneyMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MoneyMod
 {
     public static final Logger LOGGER = LogManager.getLogger();
@@ -30,7 +31,7 @@ public class MoneyMod
     public MoneyMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        bus.addGenericListener(genericClassFilter, EventPriority.NORMAL, this::onRegisterItems);
+        //bus.addGenericListener(, this::onRegisterItems); the one thing idk how to do...
 
         BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
