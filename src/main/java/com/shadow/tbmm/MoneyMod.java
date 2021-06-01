@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -28,6 +29,8 @@ public class MoneyMod
 
     public MoneyMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        bus.addGenericListener(genericClassFilter, EventPriority.NORMAL, this::onRegisterItems);
 
         BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
