@@ -10,7 +10,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -40,14 +39,14 @@ public class MoneyMod
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            event.getRegistry().register(new BlockItem(block, new Item.Properties().tab(MoneyMod.TAB))
+            event.getRegistry().register(new BlockItem(block, new Item.Properties().group(MoneyMod.TAB))
                     .setRegistryName(block.getRegistryName()));
         });
     }
 
     public static final ItemGroup TAB = new ItemGroup("MoneyModTab") {
         @Override
-        public ItemStack makeIcon() {
+        public ItemStack createIcon() {
             return new ItemStack(ItemInit.ONEHUNDREDDOLLAR_ITEM.get());
         }
     };
