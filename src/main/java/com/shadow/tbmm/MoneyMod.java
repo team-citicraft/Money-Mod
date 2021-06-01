@@ -31,8 +31,6 @@ public class MoneyMod
     public MoneyMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        //bus.addGenericListener(, this::onRegisterItems); the one thing idk how to do...
-
         BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
 
