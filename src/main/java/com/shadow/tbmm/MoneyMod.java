@@ -2,7 +2,9 @@ package com.shadow.tbmm;
 
 
 import com.shadow.tbmm.core.init.BlockInit;
+import com.shadow.tbmm.core.init.ContainerTypesInit;
 import com.shadow.tbmm.core.init.ItemInit;
+import com.shadow.tbmm.core.init.TileEntityTypesInit;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -32,6 +34,8 @@ public class MoneyMod
 
         BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
+        TileEntityTypesInit.TILE_ENTITY_TYPE.register(bus);
+        ContainerTypesInit.CONTAINER_TYPES.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
