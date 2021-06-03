@@ -9,7 +9,7 @@ version="${file.jarVersion}"
 displayName="Money Mod"
 logoFile="examplemod.png"
 credits="To the all amazing Cy4 Tutorials (youtube) for helping me learn stuff"
-authors="Shadow"
+authors="PurplePineapple, WynnKunGz, Shadow"
 description='''
 A mod for money. Make money. Spend money. Perfect for servers.
 '''
