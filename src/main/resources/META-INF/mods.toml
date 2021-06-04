@@ -5,7 +5,7 @@ license="All rights reserved"
 
 [[mods]]
 modId="tbmm"
-version="${file.jarVersion}"
+version="1.0.0"
 displayName="Money Mod"
 logoFile="examplemod.png"
 credits="To the all amazing Cy4 Tutorials (youtube) for helping me learn stuff"
