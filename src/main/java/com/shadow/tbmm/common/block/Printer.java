@@ -15,8 +15,8 @@ import net.minecraftforge.common.ToolType;
 
 public class Printer extends Block {
     public Printer() {
-        super(AbstractBlock.Properties.create(Material.IRON, MaterialColor.GRAY)
-                .hardnessAndResistance(4.0F, 5F).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool()
+        super(AbstractBlock.Properties.of(Material.METAL, MaterialColor.COLOR_GRAY)
+                .strength(4.0F, 5F).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()
                 .sound(SoundType.METAL));
     }
 

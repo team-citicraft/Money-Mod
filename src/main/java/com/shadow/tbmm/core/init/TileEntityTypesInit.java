@@ -13,6 +13,6 @@ public class TileEntityTypesInit {
             .create(ForgeRegistries.TILE_ENTITIES, MoneyMod.MOD_ID);
 
     public static final RegistryObject<TileEntityType<PrinterTileEntity>> PRINTER_TILE_ENTITY_TYPE = TILE_ENTITY_TYPE
-            .register("printer", () -> TileEntityType.Builder.create(PrinterTileEntity::new, BlockInit.PRINTER_BLOCK.get()).build(null));
+            .register("printer", () -> TileEntityType.Builder.of(PrinterTileEntity::new, BlockInit.PRINTER_BLOCK.get()).build(null));
 
 }

@@ -43,14 +43,14 @@ public class MoneyMod
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            event.getRegistry().register(new BlockItem(block, new Item.Properties().group(MoneyMod.TAB))
+            event.getRegistry().register(new BlockItem(block, new Item.Properties().tab(MoneyMod.TAB))
                     .setRegistryName(block.getRegistryName()));
         });
     }
 
     public static final ItemGroup TAB = new ItemGroup("MoneyModTab") {
         @Override
-        public ItemStack createIcon() {
+        public ItemStack makeIcon() {
             return new ItemStack(ItemInit.ONEHUNDREDDOLLAR_ITEM.get());
         }
     };
